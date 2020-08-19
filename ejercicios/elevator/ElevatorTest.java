@@ -22,11 +22,28 @@ public class ElevatorTest{
 
 		//THEN
 		if(myElevator.currentFloor <= myElevator.topFloor){
-			System.out.println("---- VALIDATION ---\nOk");
+			System.out.println("---- VALIDATION 1---\nOk");
 		}
 		else{
-			System.out.println("---- VALIDATION ---\nNot Ok - The elevator is over the topFloor");		
+			System.out.println("---- VALIDATION 1 ---\nNot Ok - The elevator is over the topFloor");		
 		}
+
+		//GIVEN
+		myELevator.currentFloor = 1;
+		myElevator.openDoor();
+
+		//WHEN
+		myElevator.goUp();
+
+		//THEN
+		if(myElevator.currentFloor == 1){
+			System.out.println("---- VALIDATION 2 ---\nOk");
+		}
+		else{
+			System.out.println("---- VALIDATION 2 ---\nNot Ok - The elevator moves with the door open");		
+		}
+
+		
 	}
 
 }
