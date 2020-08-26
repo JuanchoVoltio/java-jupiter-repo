@@ -6,8 +6,9 @@ public class Elevator{
 
 	public void goUp(){
 		System.out.println("Going up...");
-		if(!doorOpen)			
-			currentFloor++;	
+		if(!doorOpen){			
+		   currentFloor++;
+		}
 	}
 
 	public void goDown(){
