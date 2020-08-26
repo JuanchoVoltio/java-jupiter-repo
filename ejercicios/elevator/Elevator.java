@@ -3,6 +3,7 @@ public class Elevator{
 	public int desiredFloor;
 	public int topFloor = 15;
 	public boolean doorOpen;
+	public String model;
 
 	public void goUp(){
 		System.out.println("Going up...");
