@@ -29,7 +29,7 @@ public class ElevatorTest{
 		}
 
 		//GIVEN
-		myELevator.currentFloor = 1;
+		myElevator.currentFloor = 1;
 		myElevator.openDoor();
 
 		//WHEN
