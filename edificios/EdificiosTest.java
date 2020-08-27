@@ -2,29 +2,40 @@ public class EdificiosTest{
 
 	public static void main(String args[]){
 				
-		int nivelesElevador = 12;		
 		Elevador elevadoUno = new Elevador();
-		elevadoUno.setNiveles(nivelesElevador);
+		elevadoUno.serial = "**Elevador 1 - Edificio 1**";
 		Elevador elevadoDos = new Elevador();
-		elevadoDos.setNiveles(nivelesElevador);
+		elevadoDos.serial = "**Elevador 2 - Edificio 1**";
 		Elevador elevadoTres = new Elevador();
-		elevadoTres.setNiveles(nivelesElevador);
+		elevadoTres.serial = "**Elevador 3 - Edificio 1**";
 		
 		Elevador elevadores[] = { elevadoUno, elevadoDos, elevadoTres };
 		
-		Edificio edificioUno = new Edificio();
+		Elevador elevadoresDos[] = new Elevador[elevadores.length]; 
 		
-		edificioUno.setElevadores(elevadores);
+		for(int i = 0; i < elevadores.length; i++){
+			elevadoresDos[i] = (Elevador)elevadores[i].clone();
+			elevadoresDos[i].serial = "**Elevador "+(i+1)+" - Edificio 2**";
+		}
 		
-		Edificio edificioDos = new Edificio();
-		
-		edificioDos.setElevadores(edificioUno.getElevadores());
-		
-		System.out.println("Cantidad elevadores Edificio Uno "+edificioUno.getElevadores().length);
-		
-		System.out.println("Cantidad elevadores Edificio Dos "+edificioDos.getElevadores().length);
-
-		
+		{
+			Edificio edificioUno = new Edificio();
+			
+			edificioUno.setElevadores(elevadores);
+			
+			Edificio edificioDos = new Edificio();
+			
+			edificioDos.setElevadores(elevadoresDos);
+			
+			edificioUno.getElevadores()[0].goUp();
+			edificioUno.getElevadores()[0].goUp();
+			edificioUno.getElevadores()[0].goUp();
+			edificioUno.getElevadores()[0].goUp();
+			
+			System.out.println("Elevadores Edificio Uno, serial = "+edificioUno.getElevadores()[0].serial+" piso actual = "+edificioUno.getElevadores()[0].currentFloor);
+			
+			System.out.println("Elevadores Edificio Dos, serial = "+edificioDos.getElevadores()[0].serial+" piso actual = "+edificioDos.getElevadores()[0].currentFloor);
+		}
 	}
 
 }
