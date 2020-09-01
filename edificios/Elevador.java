@@ -1,19 +1,20 @@
-public class Elevador implements Cloneable{
+public class Elevador{
 	public int currentFloor = 1;
 	public int desiredFloor;
-	public int topFloor = 15;
+	public final int topFloor = 15;
+	public final int minFloor = 1;
 	public boolean doorOpen;
 	public String serial;
 
 	public void goUp(){
 		System.out.println("Going up...");
-		if(!doorOpen)			
-			currentFloor++;	
+		if(!doorOpen && currentFloor < topFloor)
+				currentFloor++;	
 	}
 
 	public void goDown(){
 		System.out.println("Going down...");
-		if(!doorOpen)
+		if(!doorOpen && currentFloor > minFloor)
 			currentFloor--;	
 	}
 	
@@ -26,15 +27,4 @@ public class Elevador implements Cloneable{
 		System.out.println("Closing door...");
 		doorOpen = false;	
 	}
-	
-	public Object clone(){
-        Object obj=null;
-        try{
-            obj=super.clone();
-        }catch(CloneNotSupportedException ex){
-            System.out.println(" no se puede duplicar");
-        }
-        return obj;
-    }
-
 }

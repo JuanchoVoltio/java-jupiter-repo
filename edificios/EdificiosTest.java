@@ -14,7 +14,9 @@ public class EdificiosTest{
 		Elevador elevadoresDos[] = new Elevador[elevadores.length]; 
 		
 		for(int i = 0; i < elevadores.length; i++){
-			elevadoresDos[i] = (Elevador)elevadores[i].clone();
+			elevadoresDos[i] = new Elevador();
+			elevadoresDos[i].currentFloor = elevadores[i].currentFloor;
+			elevadoresDos[i].desiredFloor = elevadores[i].desiredFloor;
 			elevadoresDos[i].serial = "**Elevador "+(i+1)+" - Edificio 2**";
 		}
 		
@@ -31,6 +33,8 @@ public class EdificiosTest{
 			edificioUno.getElevadores()[0].goUp();
 			edificioUno.getElevadores()[0].goUp();
 			edificioUno.getElevadores()[0].goUp();
+			edificioUno.getElevadores()[0].goUp();
+			edificioUno.getElevadores()[0].goDown();
 			
 			System.out.println("Elevadores Edificio Uno, serial = "+edificioUno.getElevadores()[0].serial+" piso actual = "+edificioUno.getElevadores()[0].currentFloor);
 			
