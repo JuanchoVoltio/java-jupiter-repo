@@ -6,47 +6,54 @@ public class Test {
 
     public static void main(String[] args) {
         Elevator myElevator = new Elevator();
-        myElevator.currentFloor = 1;
-        myElevator.desiredFloor = 55;
+        int desiredFloor = 5;
+        int maxLoad = 250;
+
+        myElevator.tellMeWhereIAm();
 
 
-	    //THEN
-		if(myElevator.currentFloor <= myElevator.topFloor){
-			System.out.println("---- VALIDATION 1---\nOk");
-		}
-		else{
-			System.out.println("---- VALIDATION 1 ---\nNot Ok - The elevator is over the topFloor");
-		}
-
-		//GIVEN
-		myElevator.currentFloor = 1;
-		myElevator.openDoor();
-
-		//WHEN
-		myElevator.goUp();
-
-		//THEN
-		if(myElevator.currentFloor == 1){
-			System.out.println("---- VALIDATION 2 ---\nOk \n----");
-		}
-		else{
-			System.out.println("---- VALIDATION 2 ---\nNot Ok - The elevator moves with the door open \n----");
-		}
-
+        boolean passTest1 = should_not_move_if_door_is_open(myElevator);
+/*
         //GIVEN
         myElevator.currentFloor = 1;
 		myElevator.topFloor = 60;
         myElevator.closeDoor();
 
         //WHEN
-        myElevator.goToDesiredFloor();
+        myElevator.goToDesiredFloor(desiredFloor);
 
         //THEN
-        if(myElevator.currentFloor == myElevator.desiredFloor){
+        if(myElevator.currentFloor == desiredFloor){
             System.out.println("---- VALIDATION 3 ---\nOk");
         }
         else{
             System.out.println("---- VALIDATION 3 ---\nNot Ok - The elevator is not in desired floor");
-        }
+        }*/
+
+//		myElevator.goToDesiredFloor(desiredFloor);
+//
+//		modifyMaxLoad(myElevator, maxLoad);
+//		System.out.println("before: " + myElevator.loadCapacity);
+//
+//		myElevator.loadCapacity = maxLoad;
+//		System.out.println("after: " + myElevator.loadCapacity);
     }
+
+	private static boolean should_not_move_if_door_is_open(Elevator myElevator) {
+		//GIVEN
+		myElevator.currentFloor = 1;
+		myElevator.openDoor();
+		boolean answer;
+
+		//WHEN
+		myElevator.goUp();
+
+		//THEN
+		return myElevator.currentFloor == 1;
+	}
+
+	private static void modifyMaxLoad(Elevator myElevator, int maxLoad) {
+    	maxLoad += 20;
+    	myElevator.loadCapacity = maxLoad;
+	}
 }
