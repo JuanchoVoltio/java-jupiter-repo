@@ -2,7 +2,7 @@ public class EdificiosTest{
 
 	public static void main(String args[]){
 				
-		Elevador elevadoUno = new Elevador();
+		/*Elevador elevadoUno = new Elevador();
 		elevadoUno.serial = "**Elevador 1 - Edificio 1**";
 		Elevador elevadoDos = new Elevador();
 		elevadoDos.serial = "**Elevador 2 - Edificio 1**";
@@ -39,7 +39,14 @@ public class EdificiosTest{
 			System.out.println("Elevadores Edificio Uno, serial = "+edificioUno.getElevadores()[0].serial+" piso actual = "+edificioUno.getElevadores()[0].currentFloor);
 			
 			System.out.println("Elevadores Edificio Dos, serial = "+edificioDos.getElevadores()[0].serial+" piso actual = "+edificioDos.getElevadores()[0].currentFloor);
-		}
+		}*/
+		int num1;
+		long num2 = 3703629630L;
+		num1 = (int)num2;
+		
+		System.out.println(num1);
+		
+		
 	}
 
 }
