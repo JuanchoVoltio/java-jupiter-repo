@@ -1,25 +1,22 @@
 public class CarreraTest{	
-	public static void main(String[] agrs) {
-		Piloto[] pilotos= new Piloto[10];
-		Pista[] pista;
+	public static void main(String[] agrs) {			
+		Piloto pilotoUno = new Piloto("C. Muñoz", false, true, false);
+		Piloto pilotoDos = new Piloto("Kobayashi", true, false, false);
+		Piloto pilotoTres = new Piloto("G. Chavez", false, false, true);
+		Piloto pilotoCuatro = new Piloto("P. Wherlein", true, false, false);
+		Piloto pilotoCinco = new Piloto("D. Ricciardo", false, true, false);
 		
-		float bonoMotor = 0.4;
-		float bonoChasis = 0.6;
-		float bonoAerodinamica = 0.5;
+		Pista pistaUno = new Pista("Long Beach", true, false, true, 100);
+		Pista pistaDos = new Pista("Interlagos", true, true, false, 100);
+		Pista pistaTres = new Pista("Suzuka", true, false, true, 100);
+		Pista pistaCuatro = new Pista("Silverstone", false, true, true, 100);
 		
-		Piloto pilotoUno = new Piloto("C. Muñoz", 0, bonoChasis, 0);
-		Piloto pilotoUno = new Piloto("Kobayashi", bonoMotor, 0, 0);
-		Piloto pilotoUno = new Piloto("G. Chavez", 0, 0, bonoAerodinamica);
-		Piloto pilotoUno = new Piloto("P. Wherlein", bonoMotor, 0, 0);
-		Piloto pilotoUno = new Piloto("D. Ricciardo", 0, bonoChasis, 0);
+		Piloto[] pilotos= {pilotoUno, pilotoDos, pilotoTres, pilotoCuatro, pilotoCinco};
+		Pista[] pista = {pistaUno, pistaDos, pistaTres, pistaCuatro};
 		
-		Pista pistaUno = new Pista("Long Beach", true, false, true);
-		Pista pistaDos = new Pista("Interlagos", true, true, false);
-		Pista pistaTres = new Pista("Suzuka", true, false, true);
-		Pista pistaCuatro = new Pista("Silverstone", false, true, true);
+		FormulaJava formulaJava = new FormulaJava(pilotos, pista);
 		
-		pista = {pistaUno, pistaDos, pistaTres, pistaCuatro};
+		formulaJava.simulacion();
 		
-		FormulaJava formulaJava = new Carrera(pilotos, pista); 
 	}
 }
