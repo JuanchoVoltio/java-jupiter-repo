@@ -4,7 +4,9 @@ public class Test{
 
 		Car theCar = new Car();
 
-		theCar.information(1,false,false);
+
+
+		theCar.information("basic");
 
 
 

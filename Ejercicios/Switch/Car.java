@@ -3,38 +3,70 @@ public class Car{
 	//int typeCar;
 	public String motor;
 	public String alloyWhell;
-	public boolean backAipBags;
+	public String backAirBags;
+	public String frontAirBags;
+	public String tiers;
 
+
+	
 	public Car(){
-		//this.typeCar = typeCar;
+		this.motor = "Si";
+		this.tiers = "Si";
+		this.frontAirBags = "Si";
+
+
 
 			}
 
-	public void information(int typeCar, boolean alloy, boolean backAipBags){
+	public void information(String type){
 
-		if (alloy = false) {
+
+		switch (type) {
+
+		case "luxury":
+		
+		alloyWhell = "Si";
+		backAirBags = "Si";
+
+		System.out.println("This car is "+type+"it has:"); 
+		System.out.println("alloy Whell: " + alloyWhell);
+		System.out.println("backAirBags : " + backAirBags);
+		System.out.println("motor : " + motor);
+		System.out.println("tiers : " + tiers);
+		System.out.println("frontAirBags : " +frontAirBags);
+		System.out.println("Building Car "+type+ " ...");
+
+		break;
+		
+		case "standard":
+
 		alloyWhell = "No";
-		}
-		else{
-		alloyWhell = "Si";	
-		}
+		backAirBags = "No";
 
-	switch (typeCar) {
+		System.out.println("This car is "+type+", it has:");
+		System.out.println("Alloy Whell: " + alloyWhell);
+		System.out.println("BackAirBags : " + backAirBags);
+		System.out.println("Motor : " + motor);
+		System.out.println("Tiers : " + tiers);
+		System.out.println("FrontAirBags : " +frontAirBags);
+		System.out.println("Building Car "+type+ " ...");
 
-		case 1:
-		
+		break;
 
-		System.out.println("This car is of luxury, has alloy Whell: "+ alloyWhell);
 
-		
-		case 2:
+		case "basic":
 
-		System.out.println("The car is the Standard");
+		alloyWhell = "No";
+		backAirBags = "No";
+		frontAirBags = "No";
 
-		case 3:
-
-		System.out.println("The car is the basic");
-
+		System.out.println("This car is "+type+", it has:");
+		System.out.println("alloy Whell: " + alloyWhell);
+		System.out.println("backAirBags : " + backAirBags);
+		System.out.println("motor : " + motor);
+		System.out.println("tiers : " + tiers);
+		System.out.println("frontAirBags : " +frontAirBags);
+		System.out.println("Building Car "+type+ " ...");
 
 		}
 	}
