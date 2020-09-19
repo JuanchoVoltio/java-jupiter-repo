@@ -5,7 +5,7 @@ public class Carro {
     private boolean rinesAleacion;
     private boolean bolsasDeAirePosteriores;
     private boolean bolsasDeAireConductor;
-    private boolean bolsasDeAirePiloto;
+    private boolean bolsasDeAireCoPiloto;
     private boolean abs;
 
     public Carro() {
@@ -19,7 +19,7 @@ public class Carro {
 
     public void inicializarStandard() {
         this.bolsasDeAireConductor = true;
-        this.bolsasDeAirePiloto = true;
+        this.bolsasDeAireCoPiloto = true;
         this.abs = true;
     }
 
@@ -27,7 +27,7 @@ public class Carro {
         this.rinesAleacion = true;
         this.bolsasDeAirePosteriores = true;
         this.bolsasDeAireConductor = true;
-        this.bolsasDeAirePiloto = true;
+        this.bolsasDeAireCoPiloto = true;
         this.abs = true;
     }
 
@@ -36,16 +36,16 @@ public class Carro {
         switch (edicion) {
             case "lujo":
                 carro.inicializarLujo();
-                break
+                break;
             case "standard":
                 carro.inicializarStandard();
-                break
+                break;
             case "basica":
                 carro.inicializarBasico();
-                break
+                break;
             default:
                 System.out.println("Error");
-                break
+                break;
         }
         return carro;
     }
@@ -90,12 +90,12 @@ public class Carro {
         this.bolsasDeAireConductor = bolsasDeAireConductor;
     }
 
-    public boolean isBolsasDeAirePiloto() {
-        return this.bolsasDeAirePiloto;
+    public boolean isBolsasDeAireCoPiloto() {
+        return this.bolsasDeAireCoPiloto;
     }
 
-    public void setBolsasDeAirePiloto(boolean bolsasDeAirePiloto) {
-        this.bolsasDeAirePiloto = bolsasDeAirePiloto;
+    public void setBolsasDeAireCoPiloto(boolean bolsasDeAireCoPiloto) {
+        this.bolsasDeAireCoPiloto = bolsasDeAireCoPiloto;
     }
 
     public boolean isAbs() {
