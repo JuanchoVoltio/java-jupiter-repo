@@ -3,7 +3,7 @@ public class TestEmsambleCarro {
 
 	public static void main(String[] agrs) {
 
-		String versionAutos = "FULL";
+		String versionAutos = "BASIC";
 		Automovil myCar;
 
 		switch (versionAutos.toUpperCase()) {
@@ -29,7 +29,7 @@ public class TestEmsambleCarro {
 		System.out.println("Aire Acondicionado: "+ myCar.isAireacondicionado());
 		System.out.println("Bolsa de aire piloto:"+ myCar.isBolsaPiloto());
 		System.out.println("Bolsa de aire copiloto: "+ myCar.isBolsaCopiloto());
-		System.out.println("Bolsa de aire plaza posterior: "+ myCar.isABS());
+		System.out.println("Bolsa de aire plaza posterior: "+ myCar.isBolsasPosteriores());
 		System.out.println("ABS: "+ myCar.isABS());
 		System.out.println("Rines de aleación: "+ myCar.isRinesAleacion());
 	}
