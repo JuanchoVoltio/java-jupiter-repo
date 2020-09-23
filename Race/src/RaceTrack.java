@@ -4,7 +4,6 @@ public class RaceTrack {
 	private Bonus bonus;
 
 	public RaceTrack(String name, Bonus bonus) {
-		super();
 		this.name = name;
 		this.bonus = bonus;
 	}

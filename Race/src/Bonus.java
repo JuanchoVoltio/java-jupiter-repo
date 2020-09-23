@@ -3,7 +3,6 @@ public class Bonus {
 	private double time;
 
 	public Bonus(double time) {
-		super();
 		this.time = time;
 	}
 
