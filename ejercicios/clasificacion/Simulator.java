@@ -8,7 +8,7 @@ public class Simulator {
         this.tracks = tracks;
     }
 
-    public simulateQuali() {
+    public void simulateQuali() {
 
     }
 
